@@ -7,7 +7,7 @@ phases:
       - aws --version
       - AWS_DEFAULT_REGION=$(echo $AWS_REGION)
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 640215541898.dkr.ecr.us-east-1.amazonaws.com
-      - REPOSITORY_URI=640215541898.dkr.ecr.us-east-1.amazonaws.com/mj-ecr-01-inventory-management-system:latest
+      - REPOSITORY_URI=640215541898.dkr.ecr.us-east-1.amazonaws.com/mj-ecr-01-inventory-management-system
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
