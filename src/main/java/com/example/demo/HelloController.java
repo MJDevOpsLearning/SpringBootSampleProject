@@ -7,6 +7,6 @@ public class HelloController {
 
     @GetMapping("/")
     public String hello() {
-        return "Hello from Spring Boot running in Docker!";
+        return "Hello from Manoj Jaiswal - Spring Boot application running in Docker!";
     }
 }
